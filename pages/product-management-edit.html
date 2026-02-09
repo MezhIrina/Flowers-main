@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title>Цветы</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../style.css">
+	<link rel="shortcut icon" href="../circles.ico">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	<script src="https://use.fontawesome.com/c61f48834a.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		
+		<div class="info-section-cont full-sis pm-list">
+			<div class="rBlock-header info-sect-h h-container-flex">
+				<h3 class="rb-title">Редактировать товар</h3>
+			</div>
+
+			<div class="pm-body edit-view sect-cont-def">
+				<div class="pm-info-container">
+					<div class="pm-info pm-info-main">
+						<h4 class="pm-title">Основные данные</h4>
+
+						<div class="pm-i-fields-group">
+							<div class="pm-i-field">
+								<div class="title">Название</div>
+								<div class="counter">
+									<input class="custominput" value="Букет из гортензий и пионовидных роз" />
+									<output>36/70</output>
+								</div>
+
+							</div>
+							<div class="pm-i-f-group three-col">
+								<div class="pm-i-field">
+									<div class="title">Категория</div>
+									<!-- Выпадающий список -->
+									<input class="custominput" value="Букеты" />
+								</div>
+								<div class="pm-i-field">
+									<div class="title">Подкатегория</div>
+									<!-- Выпадающий список -->
+									<input class="custominput" value="Авторские" />
+								</div>
+								<div class="pm-i-field">
+									<div class="title">Цвет</div>
+									<!-- Выпадающий список -->
+									<input class="custominput" value="Нежный" />
+								</div>
+							</div>
+							<div class="pm-i-field">
+								<div class="title">Описание</div>
+								<textarea class="customtextarea" rows="4" wrap="hard">Свеча в стеклянном стакане с деревянным фитилем, благодаря которому при горении можно услышать легкое потрескивание.
+
+Состав: кокосовый воск, отдушка, деревянный фитиль</textarea>
+							</div>
+						</div>
+
+						<div class="pm-i-cb-container">
+							<div class="cb-box">
+								<input type="checkbox" class="simple-cb">
+								<div class="label">Добавить инструкцию</div>
+							</div>
+							
+							<!-- Выпадающий список -->
+							<input type="text" class="custominput" value="Букет" />
+						</div>
+					</div>
+
+					<div class="pm-info pm-info-params">
+						<h4 class="pm-title">Параметры</h4>
+
+						<div class="pm-i-params-sect">
+							<div class="pm-i-f-group two-col">
+								<div class="pm-i-field two-f">
+									<div class="title">Размеры товара (ШхВ), см</div>
+									<input class="custominput" value="50" />
+									<input class="custominput" value="40" />
+								</div>
+								<div class="pm-i-field">
+									<div class="title">Размер</div>
+									<!-- Выпадающий список -->
+									<input class="custominput" value="Большой" />
+								</div>
+							</div>
+
+							<div class="pm-i-radio-group">
+								<div class="title">Лейбл:</div>
+								<label class="pm-i-radio">
+									<input type="radio" class="simple-radio" name="label">
+									Не выбрано
+								</label>
+								<label class="pm-i-radio">
+									<input type="radio" class="simple-radio" name="label">
+									Хит
+								</label>
+								<label class="pm-i-radio">
+									<input type="radio" class="simple-radio" name="label">
+									Новинка
+								</label>
+								<label class="pm-i-radio">
+									<input type="radio" class="simple-radio" name="label">
+									Скидка
+								</label>
+							</div>
+						</div>
+
+						<div class="pm-i-params-sect composition-sect">
+							<h4 class="pm-title">Состав</h4>
+
+							<div class="composition">
+								Роза розовая 60 см - 2, Ромашка кусовая садовая - 2, Диантус асс - 2, Салал - 2, Ромашка кусовая садовая - 2, Роза розовая 60 см - 2
+							</div>
+
+							<button class="btn">Редактировать</button>
+						</div>
+
+						<div class="pm-i-params-sect prices-sect">
+							<h4 class="pm-title">Цены</h4>
+
+							<div class="pm-i-f-group prices">
+								<div class="pm-i-field">
+									<div class="title">Цена</div>
+									<div class="input-icon">
+										<input type="text" class="custominput actually-money" value="2 563" />
+									</div>
+								</div>
+								<div class="pm-i-field">
+									<div class="title">Скидочная цена</div>
+									<div class="input-icon">
+										<input type="text" class="custominput actually-money" value="2 399" />
+									</div>
+								</div>
+								<button class="btn">Пересчитать цену</button>
+							</div>
+						</div>
+
+						<div class="pm-i-cb-container">
+							<div class="cb-box">
+								<input type="checkbox" class="simple-cb">
+								<div class="label">Показывать на сайте</div>
+							</div>
+							
+							<div class="cb-box">
+								<input type="checkbox" class="simple-cb">
+								<div class="label">Товар по умолчанию</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="btns-container">
+						<button class="btn">Сохранить</button>
+						
+						<div class="add-btns">
+							<button class="btn btn-second">Добавить вариацию</button>
+							<button class="btn btn-second">Удалить товар</button>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="pm-products-container">
+					<div class="pm-p-sect prod-groups">
+						<h4 class="pm-title">Товары из группы</h4>
+
+						<div class="prod-group">
+							<div class="prod-item checked">
+								<div class="prod-item-img" style="background-image: url('../img/flower.png');">
+									<div class="check">
+										<svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M2 9.30435L8.76923 16L18 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+								</div>
+								<div class="prod-item-info">
+									<div class="title">
+										<div class="text">Стандарт <span>(C1)</span></div>
+										<span class="price w-rub">2 399</span>
+									</div>
+									<div class="info">
+										Роза розовая 60 см - 2, Ромашка кусовая садовая - 2, Диантус асс - 2, Салал - 2, Ромашка кусовая садовая - 2, Роза розовая 60 см - 2
+									</div>
+								</div>
+								<div class="prod-item-btns">
+									<div class="control-btn">
+										<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M2.21113 2.21094L18.7881 18.7879M18.7881 2.21094L2.21113 18.7879" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+										</svg>
+									</div>
+									<div class="control-btn">
+										<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M18.877 7.30468L11 12.5M18.877 7.30468C4.5 5.44531 2.14863 12.8047 2.12324 19.4363M18.877 7.30468L10.5 1.5625" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+								</div>
+							</div>
+
+							<div class="prod-item active">
+								<div class="prod-item-img" style="background-image: url('../img/flower.png');">
+									<div class="check">
+										<svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M2 9.30435L8.76923 16L18 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+								</div>
+								<div class="prod-item-info">
+									<div class="title">
+										<div class="text">Стандарт <span>(C1)</span></div>
+										<span class="price w-rub">2 399</span>
+									</div>
+									<div class="info">
+										Роза розовая 60 см - 2, Ромашка кусовая садовая - 2, Диантус асс - 2, Салал - 2, Ромашка кусовая садовая - 2, Роза розовая 60 см - 2
+									</div>
+								</div>
+								<div class="prod-item-btns">
+									<div class="control-btn">
+										<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M2.21113 2.21094L18.7881 18.7879M18.7881 2.21094L2.21113 18.7879" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+										</svg>
+									</div>
+									<div class="control-btn">
+										<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M18.877 7.30468L11 12.5M18.877 7.30468C4.5 5.44531 2.14863 12.8047 2.12324 19.4363M18.877 7.30468L10.5 1.5625" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+								</div>
+							</div>
+
+							<div class="prod-item">
+								<div class="prod-item-img" style="background-image: url('../img/flower.png');">
+									<div class="check">
+										<svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M2 9.30435L8.76923 16L18 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+								</div>
+								<div class="prod-item-info">
+									<div class="title">
+										<div class="text">Стандарт <span>(C1)</span></div>
+										<span class="price w-rub">2 399</span>
+									</div>
+									<div class="info">
+										Роза розовая 60 см - 2, Ромашка кусовая садовая - 2, Диантус асс - 2, Салал - 2, Ромашка кусовая садовая - 2, Роза розовая 60 см - 2
+									</div>
+								</div>
+								<div class="item-btns">
+									<div class="control-btn">
+										<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M2.21113 2.21094L18.7881 18.7879M18.7881 2.21094L2.21113 18.7879" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+										</svg>
+									</div>
+									<div class="control-btn">
+										<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M18.877 7.30468L11 12.5M18.877 7.30468C4.5 5.44531 2.14863 12.8047 2.12324 19.4363M18.877 7.30468L10.5 1.5625" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="pm-p-sect materials-groups">
+						<h4 class="pm-title">Материалы</h4>
+
+						<div class="materials-group">
+							<div class="materials-item">
+								<div class="num">1</div>
+								<div class="img-box">
+									<img src="../img/flower.png" alt="">
+								</div>
+								<div class="info">
+									<div class="title">какре-то фото цветов.png</div>
+									<button class="btn-change">Заменить</button>
+								</div>
+								<div class="item-btns">
+									<div class="control-btn">
+										<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M2.21113 2.21094L18.7881 18.7879M18.7881 2.21094L2.21113 18.7879" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+										</svg>
+									</div>
+									<div class="control-btn">
+										<svg width="23" height="9" viewBox="0 0 23 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 1.5H22M22 7.5H1" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round"/>
+										</svg>
+									</div>
+								</div>
+							</div>
+
+							<div class="materials-item">
+								<div class="num">2</div>
+								<div class="img-box">
+									<img src="../img/flower.png" alt="">
+								</div>
+								<div class="info">
+									<textarea class="customtextarea">Текст текст</textarea>
+								</div>
+								<div class="item-btns">
+									<div class="control-btn">
+										<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M2.21113 2.21094L18.7881 18.7879M18.7881 2.21094L2.21113 18.7879" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+										</svg>
+									</div>
+									<div class="control-btn">
+										<svg width="23" height="9" viewBox="0 0 23 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 1.5H22M22 7.5H1" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round"/>
+										</svg>
+									</div>
+								</div>
+							</div>
+							
+							<div class="materials-item">
+								<div class="num">3</div>
+								<div class="img-box">
+									<img src="../img/flower.png" alt="">
+								</div>
+								<div class="info">
+									<div class="title">какре-то фото цветов.png</div>
+									<button class="btn-change">Заменить</button>
+								</div>
+								<div class="item-btns">
+									<div class="control-btn">
+										<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M2.21113 2.21094L18.7881 18.7879M18.7881 2.21094L2.21113 18.7879" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+										</svg>
+									</div>
+									<div class="control-btn">
+										<svg width="23" height="9" viewBox="0 0 23 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 1.5H22M22 7.5H1" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round"/>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="materials-btn">
+							<button class="btn-material">Добавить фото</button>
+							<button class="btn-material">Добавить видео</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+
+<script src="../script/jquery-3.3.1.min.js"></script>
+<script src="../script/main.js"></script>
+
+</html>
+
+<!-- #CECECE -->
