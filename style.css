@@ -3159,6 +3159,10 @@ button {
     display: none;
 }
 
+.find_goods_open{
+    cursor: pointer;
+}
+
 /* ----- !Модалка аквапаки ----- */
 
 /* ----- Чекбокс ----- */
