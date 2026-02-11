@@ -3013,7 +3013,7 @@ button {
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .pack-modal__wrapper .pack-cards { 
@@ -3149,10 +3149,10 @@ button {
 }
 
 .item-count-minus {
-  background: #F9F9F9 url(img/minus.svg) center / 16px 16px no-repeat;
+  background: #F9F9F9 url(/img/minus.svg) center / 16px 16px no-repeat;
 }
 .item-count-plus {
-  background: #F9F9F9 url(img/plus.svg) center / 16px 16px no-repeat;
+  background: #F9F9F9 url(/img/plus.svg) center / 16px 16px no-repeat;
 }
 
 .find_goods{
