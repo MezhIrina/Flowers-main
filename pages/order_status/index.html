@@ -1,0 +1,431 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Цветы</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="shortcut icon" href="../../circles.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://use.fontawesome.com/c61f48834a.js"></script>
+  </head>
+
+  <body style="background: #c2c2c2">
+    <div class="maincontent">
+      <div class="mainBlock__baseBlock baseBlock">
+        <div class="orders-status-menu">
+          <div
+            class="orders-status-menu__item"
+            data-module-color="#2A2A2A"
+            data-text-color="#FFFFFF"
+            data-active-image="status_all_active.svg"
+            data-active-page="allOrders"
+          >
+            <p class="orders-status-menu__item_count">1000</p>
+            <div class="orders-status-menu__item_right">
+              <div class="orders-status-menu__item_right_icon">
+                <img src="/img/status_all.svg" alt="order" />
+              </div>
+            </div>
+          </div>
+          <div
+            class="orders-status-menu__item"
+            data-module-color="#FE8627"
+            data-text-color="#FFFFFF"
+            data-active-image="status_new_active.svg"
+            data-active-page="newOrders"
+          >
+            <p class="orders-status-menu__item_count">1000</p>
+            <div class="orders-status-menu__item_right">
+              <div class="orders-status-menu__item_right_icon">
+                <img src="/img/status_new.svg" alt="order" />
+              </div>
+              <p class="orders-status-menu__item_right_status">Новые</p>
+            </div>
+          </div>
+
+          <div
+            class="orders-status-menu__item"
+            data-module-color="#CD6567"
+            data-text-color="#FFFFFF"
+            data-active-image="status_processing_active.svg"
+            data-active-page="processOrder"
+          >
+            <p class="orders-status-menu__item_count">1000</p>
+            <div class="orders-status-menu__item_right">
+              <div class="orders-status-menu__item_right_icon">
+                <img src="/img/status_processing.svg" alt="order" />
+              </div>
+              <p class="orders-status-menu__item_right_status">Обработка</p>
+            </div>
+          </div>
+
+          <div
+            class="orders-status-menu__item"
+            data-module-color="#775BE4"
+            data-text-color="#FFFFFF"
+            data-active-image="status_submit_active.svg"
+            data-active-page="allOrders"
+          >
+            <p class="orders-status-menu__item_count">1000</p>
+            <div class="orders-status-menu__item_right">
+              <div class="orders-status-menu__item_right_icon">
+                <img src="/img/status_submit.svg" alt="order" />
+              </div>
+              <p class="orders-status-menu__item_right_status">Принято</p>
+            </div>
+          </div>
+
+          <div
+            class="orders-status-menu__item"
+            data-module-color="#60BE27"
+            data-text-color="#FFFFFF"
+            data-active-image="status_job_active.svg"
+            data-active-page="allOrders"
+          >
+            <p class="orders-status-menu__item_count">1000</p>
+            <div class="orders-status-menu__item_right">
+              <div class="orders-status-menu__item_right_icon">
+                <img src="/img/status_job.svg" alt="order" />
+              </div>
+              <p class="orders-status-menu__item_right_status">В сборке</p>
+            </div>
+          </div>
+
+          <div class="orders-status-menu__contain">
+            <div
+              class="orders-status-menu__item"
+              data-module-color="#777777"
+              data-text-color="#FFFFFF"
+              data-active-image="status_cell_active.svg"
+              data-active-page="allOrders"
+              data-cell="1"
+            >
+              <p class="orders-status-menu__item_count">10</p>
+              <div class="orders-status-menu__item_right">
+                <div class="orders-status-menu__item_right_icon">
+                  <img src="/img/status_cell.svg" alt="order" />
+                </div>
+                <p class="orders-status-menu__item_right_status">В ячейке</p>
+              </div>
+            </div>
+            <div
+              class="orders-status-menu__item"
+              data-module-color="#775BE4"
+              data-text-color="#FFFFFF"
+              data-active-image="status_ready_active.svg"
+              data-active-page="allOrders"
+            >
+              <p class="orders-status-menu__item_count">22</p>
+              <div class="orders-status-menu__item_right">
+                <div class="orders-status-menu__item_right_icon">
+                  <img src="/img/status_ready.svg" alt="order" />
+                </div>
+                <p class="orders-status-menu__item_right_status">Готов</p>
+              </div>
+            </div>
+            <div
+              class="orders-status-menu__item"
+              data-module-color="#FFD000"
+              data-text-color="#434343"
+              data-active-image="status_search_active.svg"
+              data-active-page="searchOrders"
+            >
+              <p class="orders-status-menu__item_count">10</p>
+              <div class="orders-status-menu__item_right">
+                <div class="orders-status-menu__item_right_icon">
+                  <img src="/img/status_search.svg" alt="order" />
+                </div>
+                <p class="orders-status-menu__item_right_status">Поиск</p>
+              </div>
+            </div>
+            <div
+              class="orders-status-menu__item"
+              data-module-color="#127FCE"
+              data-text-color="#FFFFFF"
+              data-active-image="status_appoint_active.svg"
+              data-active-page="allOrders"
+            >
+              <p class="orders-status-menu__item_count">6</p>
+              <div class="orders-status-menu__item_right">
+                <div class="orders-status-menu__item_right_icon">
+                  <img src="/img/status_appoint.svg" alt="order" />
+                </div>
+                <p class="orders-status-menu__item_right_status">Назначен</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="orders-status-menu__item"
+            data-module-color="#C753A0"
+            data-text-color="#FFFFFF"
+            data-active-image="status_curier_active.svg"
+            data-active-page="allOrders"
+          >
+            <p class="orders-status-menu__item_count">4</p>
+            <div class="orders-status-menu__item_right">
+              <div class="orders-status-menu__item_right_icon">
+                <img src="/img/status_curier.svg" alt="order" />
+              </div>
+              <p class="orders-status-menu__item_right_status">У курьера</p>
+            </div>
+          </div>
+
+          <div
+            class="orders-status-menu__item"
+            data-module-color="#0054A7"
+            data-text-color="#FFFFFF"
+            data-active-image="status_dilivery_active.svg"
+            data-active-page="allOrders"
+          >
+            <p class="orders-status-menu__item_count">1</p>
+            <div class="orders-status-menu__item_right">
+              <div class="orders-status-menu__item_right_icon">
+                <img src="/img/status_dilivery.svg" alt="order" />
+              </div>
+              <p class="orders-status-menu__item_right_status">Доставка</p>
+            </div>
+          </div>
+
+          <div
+            class="orders-status-menu__item"
+            data-module-color="#AD2E1D"
+            data-text-color="#FFFFFF"
+            data-active-image="status_error_active.svg"
+            data-active-page="allOrders"
+          >
+            <p class="orders-status-menu__item_count">4</p>
+            <div class="orders-status-menu__item_right">
+              <div class="orders-status-menu__item_right_icon">
+                <img src="/img/status_error.svg" alt="order" />
+              </div>
+              <p class="orders-status-menu__item_right_status">Ошибка</p>
+            </div>
+          </div>
+
+          <div
+            class="orders-status-menu__item"
+            data-module-color="#611222"
+            data-text-color="#FFFFFF"
+            data-active-image="status_cancel_active.svg"
+            data-active-page="allOrders"
+          >
+            <p class="orders-status-menu__item_count">4</p>
+            <div class="orders-status-menu__item_right">
+              <div class="orders-status-menu__item_right_icon">
+                <img src="/img/status_cancel.svg" alt="order" />
+              </div>
+              <p class="orders-status-menu__item_right_status">Отмена</p>
+            </div>
+          </div>
+
+          <div
+            class="orders-status-menu__item"
+            data-module-color="#628222"
+            data-text-color="#FFFFFF"
+            data-active-image="status_complete_active.svg"
+            data-active-page="allOrders"
+          >
+            <p class="orders-status-menu__item_count">4</p>
+            <div class="orders-status-menu__item_right">
+              <div class="orders-status-menu__item_right_icon">
+                <img src="/img/status_complete.svg" alt="order" />
+              </div>
+              <p class="orders-status-menu__item_right_status">Завершен</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container container-order-status">
+          <div class="info-section-cont left-sis info-section-order-left"></div>
+
+          <div
+            class="info-section-cont right-sis info-section-order-right"
+            data-empty="Выберите заказ, чтобы увидеть детали"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="../../script/jquery-3.3.1.min.js"></script>
+  <script src="../../script/main.js"></script>
+  <script src="../../script/scrollbooster.min.js"></script>
+  <!-- скрипт для создания скроллов -->
+</html>
+
+<script>
+  $(function () {
+    var $menu = $(".orders-status-menu");
+    var $items = $menu.find(".orders-status-menu__item");
+    // Сохраняем оригинальные цвета/изображения для восстановления
+    $items.each(function () {
+      var $it = $(this);
+      // найдем <img> внутри .orders-status-menu__item_right_icon (если есть) и сохраним src
+      var $iconWrap = $it.find(".orders-status-menu__item_right_icon");
+      var $img = $iconWrap.find("img").first();
+      if ($img.length) {
+        $img.data("orig-src", $img.attr("src"));
+      } else {
+        // поместим пустую data, чтобы потом знать, что картинки не было
+        $iconWrap.data("orig-has-img", false);
+      }
+    });
+    // Функция установки активного состояния на элемент
+    function setActive($item) {
+      // Снять "актив" со всех
+      $items.each(function () {
+        var $it = $(this);
+        $it.removeClass("active-status");
+        $it.css("background-color", "#fff");
+        $it
+          .find(".orders-status-menu__item_right_status")
+          .css("color", "#C2A2A9");
+        $it.find(".orders-status-menu__item_count").css("color", "#424242");
+        if ($it.data("cell")) {
+          $it.parent().css("background-color", "#fff");
+        }
+        // Восстанавливаем изображение если было
+        var $iconWrap = $it.find(".orders-status-menu__item_right_icon");
+        var $img = $iconWrap.find("img").first();
+        if ($img.length) {
+          var origSrc = $img.data("orig-src");
+          if (origSrc) $img.attr("src", origSrc);
+        } else {
+          // если активный элемент устанавливал img dynamically, удалим его
+          $iconWrap.find("img._dynamic_active_img").remove();
+        }
+      });
+      // Применяем активному элементу стили из data-*
+      $item.addClass("active-status");
+      var moduleColor =
+        $item.attr("data-module-color") || $item.data("module-color");
+      var textColor = $item.attr("data-text-color") || $item.data("text-color");
+      if (moduleColor) {
+        // примеры применения: меняем цвет текста и border-left (настраиваем по желанию)
+        $item.css({
+          "background-color": moduleColor, // при необходимости можно установить фон
+        });
+        if ($item.data("cell")) {
+          $item.parent().css("background-color", moduleColor);
+        }
+        // если нужно изменить внутренний текст цвет отдельно:
+        $item
+          .find(".orders-status-menu__item_right_status")
+          .css("color", textColor);
+        $item.find(".orders-status-menu__item_count").css("color", textColor);
+      }
+      // Заменяем картинку, если data-active-image задан
+      var activeImage =
+        $item.attr("data-active-image") || $item.data("active-image");
+      if (activeImage) {
+        activeImage = "../../img/" + activeImage;
+      }
+
+      var $iconWrap = $item
+        .find(".orders-status-menu__item_right_icon")
+        .first();
+      if (activeImage && $iconWrap.length) {
+        var $img = $iconWrap.find("img").first();
+        if ($img.length) {
+          $img.attr("src", activeImage);
+        } else {
+          // создаем img, если его не было — помечаем как динамический
+          $("<img/>", {
+            src: activeImage,
+            alt: "active icon",
+            class: "_dynamic_active_img",
+          }).appendTo($iconWrap);
+        }
+      }
+      // Загружаем страницу в left-sis по data-active-page
+      var activePage =
+        $item.attr("data-active-page") || $item.data("active-page");
+      if (activePage) {
+        var pagePath = activePage;
+        // если значение вроде "allOrders", подставляем ".html"
+        if (!/\.html$/.test(pagePath)) pagePath = pagePath + ".html";
+        // Загружаем содержимое в .left-sis
+        $(".left-sis").load(pagePath, function (response, status, xhr) {
+          if (status === "error") {
+            console.error("Ошибка загрузки:", pagePath, xhr && xhr.statusText);
+            // Можно показать сообщение пользователю:
+            $(".left-sis").html(
+              '<div class="load-error">Не удалось загрузить содержимое.</div>',
+            );
+          }
+        });
+      } else {
+        // если data-active-page пуст — можно очистить left-sis или оставить как есть — оставлю пустой
+        $(".left-sis").empty();
+      }
+    }
+    // Навешиваем клик-обработчик
+    $items.on("click", function (e) {
+      e.preventDefault();
+      var $this = $(this);
+      setActive($this);
+    });
+    // (Опционально) — поставить активный по умолчанию: первый элемент с data-active-page или первый в списке
+    var $default = $items.filter("[data-active-page]").first();
+    if ($default.length === 0) $default = $items.first();
+    if ($default.length) setActive($default);
+  });
+
+  $(document).ready(function () {
+    var $orderList = $(".order-list");
+    var $items = $orderList.find(".order-card__item");
+    var $right = $(".info-section-order-right");
+    var emptyMessage = $right.attr("data-empty") || "Нет данных";
+    function showEmpty() {
+      $right.addClass("empty-info-sect");
+    }
+
+    if ($items.filter(".active-order").length === 0) {
+      showEmpty();
+    }
+    // Клик по заказу
+    $(document).on("click", ".order-card__item", function (e) {
+      
+      e.preventDefault();
+      var $this = $(this);
+      // если клик по уже активному — ничего не делаем (опционально можно ре-загрузить)
+      if ($(this).hasClass("active-order")) return;
+      // снять актив у всех и поставить текущий
+      $items.removeClass("active-order");
+      $(this).addClass("active-order");
+      // взять атрибут data-instance
+      var instance = $(this).attr("data-instance") || $(this).data("instance") || "";
+          console.log("pp");
+           console.log($(this));
+      if (!instance) {
+        // если нет instance — показываем пустое сообщение
+        showEmpty();
+        return;
+      }
+      // формируем путь к файлу: предполагаем instanceName -> instanceName.html
+      var filePath = instance;
+      if (!/\.html$/.test(filePath)) filePath = filePath + ".html";
+
+   
+      $right.load(filePath, function (response, status, xhr) {
+        if (status === "error") {
+          console.error("нет файла");
+        } else {
+          $right.removeClass("empty-info-sect");
+        }
+      });
+    });
+  });
+
+
+</script>
