@@ -59,7 +59,7 @@
             data-active-image="status_processing_active.svg"
             data-active-page="processOrder"
           >
-            <p class="orders-status-menu__item_count">1000</p>
+            <p class="orders-status-menu__item_count">10</p>
             <div class="orders-status-menu__item_right">
               <div class="orders-status-menu__item_right_icon">
                 <img src="/img/status_processing.svg" alt="order" />
@@ -73,9 +73,9 @@
             data-module-color="#775BE4"
             data-text-color="#FFFFFF"
             data-active-image="status_submit_active.svg"
-            data-active-page="allOrders"
+            data-active-page="submitOrders"
           >
-            <p class="orders-status-menu__item_count">1000</p>
+            <p class="orders-status-menu__item_count">10</p>
             <div class="orders-status-menu__item_right">
               <div class="orders-status-menu__item_right_icon">
                 <img src="/img/status_submit.svg" alt="order" />
@@ -89,9 +89,9 @@
             data-module-color="#60BE27"
             data-text-color="#FFFFFF"
             data-active-image="status_job_active.svg"
-            data-active-page="allOrders"
+            data-active-page="jobOrders"
           >
-            <p class="orders-status-menu__item_count">1000</p>
+            <p class="orders-status-menu__item_count">10</p>
             <div class="orders-status-menu__item_right">
               <div class="orders-status-menu__item_right_icon">
                 <img src="/img/status_job.svg" alt="order" />
@@ -257,6 +257,35 @@
     </div>
   </body>
 
+  <div class="modal-container pinkod-modal"></div>
+
+  <div class="modal-container image-modal">
+    <div class="image-modal__wrapper">
+      <div class="modal-header">
+        <button class="close-modal" onclick="closeModal('image-modal')">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="50" height="50" rx="25" fill="white" />
+            <path
+              opacity="0.5"
+              d="M17 33L33 17M17 17L33 33"
+              stroke="#434343"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <img src="/img/sostav3.png" alt="" />
+    </div>
+  </div>
+
   <script src="../../script/jquery-3.3.1.min.js"></script>
   <script src="../../script/main.js"></script>
   <script src="../../script/scrollbooster.min.js"></script>
@@ -267,22 +296,17 @@
   $(function () {
     var $menu = $(".orders-status-menu");
     var $items = $menu.find(".orders-status-menu__item");
-    // Сохраняем оригинальные цвета/изображения для восстановления
     $items.each(function () {
       var $it = $(this);
-      // найдем <img> внутри .orders-status-menu__item_right_icon (если есть) и сохраним src
       var $iconWrap = $it.find(".orders-status-menu__item_right_icon");
       var $img = $iconWrap.find("img").first();
       if ($img.length) {
         $img.data("orig-src", $img.attr("src"));
       } else {
-        // поместим пустую data, чтобы потом знать, что картинки не было
         $iconWrap.data("orig-has-img", false);
       }
     });
-    // Функция установки активного состояния на элемент
     function setActive($item) {
-      // Снять "актив" со всех
       $items.each(function () {
         var $it = $(this);
         $it.removeClass("active-status");
@@ -294,37 +318,37 @@
         if ($it.data("cell")) {
           $it.parent().css("background-color", "#fff");
         }
-        // Восстанавливаем изображение если было
+
         var $iconWrap = $it.find(".orders-status-menu__item_right_icon");
         var $img = $iconWrap.find("img").first();
         if ($img.length) {
           var origSrc = $img.data("orig-src");
           if (origSrc) $img.attr("src", origSrc);
         } else {
-          // если активный элемент устанавливал img dynamically, удалим его
+
           $iconWrap.find("img._dynamic_active_img").remove();
         }
       });
-      // Применяем активному элементу стили из data-*
+
       $item.addClass("active-status");
       var moduleColor =
         $item.attr("data-module-color") || $item.data("module-color");
       var textColor = $item.attr("data-text-color") || $item.data("text-color");
       if (moduleColor) {
-        // примеры применения: меняем цвет текста и border-left (настраиваем по желанию)
+
         $item.css({
-          "background-color": moduleColor, // при необходимости можно установить фон
+          "background-color": moduleColor, 
         });
         if ($item.data("cell")) {
           $item.parent().css("background-color", moduleColor);
         }
-        // если нужно изменить внутренний текст цвет отдельно:
+
         $item
           .find(".orders-status-menu__item_right_status")
           .css("color", textColor);
         $item.find(".orders-status-menu__item_count").css("color", textColor);
       }
-      // Заменяем картинку, если data-active-image задан
+
       var activeImage =
         $item.attr("data-active-image") || $item.data("active-image");
       if (activeImage) {
@@ -339,7 +363,7 @@
         if ($img.length) {
           $img.attr("src", activeImage);
         } else {
-          // создаем img, если его не было — помечаем как динамический
+
           $("<img/>", {
             src: activeImage,
             alt: "active icon",
@@ -347,35 +371,35 @@
           }).appendTo($iconWrap);
         }
       }
-      // Загружаем страницу в left-sis по data-active-page
+
       var activePage =
         $item.attr("data-active-page") || $item.data("active-page");
       if (activePage) {
         var pagePath = activePage;
-        // если значение вроде "allOrders", подставляем ".html"
+
         if (!/\.html$/.test(pagePath)) pagePath = pagePath + ".html";
-        // Загружаем содержимое в .left-sis
+   
         $(".left-sis").load(pagePath, function (response, status, xhr) {
           if (status === "error") {
             console.error("Ошибка загрузки:", pagePath, xhr && xhr.statusText);
-            // Можно показать сообщение пользователю:
+
             $(".left-sis").html(
               '<div class="load-error">Не удалось загрузить содержимое.</div>',
             );
           }
         });
       } else {
-        // если data-active-page пуст — можно очистить left-sis или оставить как есть — оставлю пустой
+
         $(".left-sis").empty();
       }
     }
-    // Навешиваем клик-обработчик
+ 
     $items.on("click", function (e) {
       e.preventDefault();
       var $this = $(this);
       setActive($this);
     });
-    // (Опционально) — поставить активный по умолчанию: первый элемент с data-active-page или первый в списке
+
     var $default = $items.filter("[data-active-page]").first();
     if ($default.length === 0) $default = $items.first();
     if ($default.length) setActive($default);
@@ -393,30 +417,21 @@
     if ($items.filter(".active-order").length === 0) {
       showEmpty();
     }
-    // Клик по заказу
     $(document).on("click", ".order-card__item", function (e) {
-      
       e.preventDefault();
       var $this = $(this);
-      // если клик по уже активному — ничего не делаем (опционально можно ре-загрузить)
       if ($(this).hasClass("active-order")) return;
-      // снять актив у всех и поставить текущий
       $items.removeClass("active-order");
       $(this).addClass("active-order");
-      // взять атрибут data-instance
-      var instance = $(this).attr("data-instance") || $(this).data("instance") || "";
-          console.log("pp");
-           console.log($(this));
+      var instance =
+        $(this).attr("data-instance") || $(this).data("instance") || "";
       if (!instance) {
-        // если нет instance — показываем пустое сообщение
         showEmpty();
         return;
       }
-      // формируем путь к файлу: предполагаем instanceName -> instanceName.html
       var filePath = instance;
       if (!/\.html$/.test(filePath)) filePath = filePath + ".html";
 
-   
       $right.load(filePath, function (response, status, xhr) {
         if (status === "error") {
           console.error("нет файла");
@@ -427,5 +442,41 @@
     });
   });
 
+  function openModal(modalClass) {
+    $("." + modalClass).addClass("open");
+    $("body").css("overflow", "hidden");
+    return false;
+  }
+  function closeModal(modalClass) {
+    $("body").css("overflow", "auto");
+    $("." + modalClass).removeClass("open");
+    return false;
+  }
 
+  $(document).on("change", ".fileInputWrapper .fileInput", function () {
+  const wrapper = $(this).closest(".fileInputWrapper");
+  const file = this.files && this.files[0];
+  if (file) {
+    const preview = wrapper.find(".preview");
+    // Показываем превью
+    preview[0].style.backgroundImage = `url('${URL.createObjectURL(file)}')`;
+    preview.addClass("input_photo_full input_photo");
+    wrapper.find(".image_load").addClass("image_load_icon");
+    wrapper.find(".image_reload").html('<p>Заменить</p>');
+    wrapper.find(".image_load .image_delete").removeClass("hide");
+
+
+  } 
+});
+
+$(document).on("click", ".fileInputWrapper .image_delete", function () {
+  const wrapper = $(this).closest(".fileInputWrapper");
+  const preview = wrapper.find(".preview");
+    preview[0].style.backgroundImage = `none`;
+    preview.removeClass("input_photo_full input_photo");
+    wrapper.find(".image_load").removeClass("image_load_icon");
+    wrapper.find(".image_reload").html('<div class="input_photo" style="background-image: url(/img/default_load.png);"></div>');
+    wrapper.find(".image_load .image_delete").addClass("hide");
+ 
+});
 </script>

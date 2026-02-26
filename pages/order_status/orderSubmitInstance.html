@@ -12,6 +12,38 @@
         >
           <circle cx="7" cy="7" r="7" fill="#30BD57" />
         </svg>
+        <a class="order-redact-info" href="#order_history">
+          Редакт.
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="18" height="18" rx="9" fill="#127FCE" />
+            <path
+              d="M8.65258 12.2585C8.13475 12.2585 7.71108 11.8351 7.75514 11.3191C7.79441 10.8591 7.86008 10.4515 7.95215 10.1535C8.10787 9.66343 8.32847 9.26693 8.61395 8.96398C8.89943 8.66104 9.24331 8.38483 9.64558 8.13535C9.90511 7.96605 10.1387 7.77671 10.3463 7.56733C10.5539 7.35794 10.7183 7.11737 10.8394 6.84561C10.9605 6.57385 11.0211 6.27313 11.0211 5.94346C11.0211 5.54696 10.9303 5.20392 10.7486 4.91434C10.5669 4.62476 10.3247 4.40201 10.0219 4.24609C9.72344 4.0857 9.39038 4.00551 9.02271 4.00551C8.68965 4.00551 8.37172 4.07679 8.06894 4.21936C7.76615 4.36192 7.51527 4.58467 7.3163 4.88761C7.26498 4.9646 7.21927 5.04737 7.17917 5.13592C6.96203 5.61542 6.56276 6.0437 6.03638 6.0437C5.47044 6.0437 5.00105 5.56674 5.14655 5.01983C5.24563 4.64734 5.3936 4.31146 5.59043 4.01219C5.95377 3.45531 6.4339 3.03431 7.03082 2.74919C7.63206 2.46406 8.29603 2.3215 9.02271 2.3215C9.8186 2.3215 10.515 2.4752 11.1119 2.7826C11.7088 3.08554 12.1717 3.511 12.5004 4.05897C12.8335 4.60249 13 5.23733 13 5.96351C13 6.46247 12.9243 6.91243 12.7729 7.31339C12.6215 7.70989 12.4052 8.06406 12.1241 8.37592C11.8473 8.68777 11.5142 8.96399 11.1249 9.20456C10.7572 9.44068 10.4588 9.6857 10.2295 9.93964C10.0046 10.1936 9.84023 10.4943 9.73641 10.8418C9.69465 10.9816 9.66059 11.1552 9.63423 11.3463C9.5648 11.8494 9.16048 12.2585 8.65258 12.2585ZM8.69181 15.6785C8.33712 15.6785 8.03217 15.5493 7.77697 15.2909C7.52176 15.0281 7.39416 14.7118 7.39416 14.342C7.39416 13.9767 7.52176 13.6648 7.77697 13.4064C8.03217 13.1436 8.33712 13.0122 8.69181 13.0122C9.04217 13.0122 9.34496 13.1436 9.60016 13.4064C9.85969 13.6648 9.98946 13.9767 9.98946 14.342C9.98946 14.587 9.9289 14.812 9.80779 15.0169C9.691 15.2174 9.53528 15.3778 9.34063 15.4981C9.14599 15.6184 8.92971 15.6785 8.69181 15.6785Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+        <a href="#comment_section" class="order-comment-indicator">
+          <svg
+            width="23"
+            height="21"
+            viewBox="0 0 23 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              opacity="0.6"
+              d="M1 10.5C1 5.25329 5.25329 1 10.5 1C15.7467 1 20 5.25329 20 10.5C20 15.7467 15.7467 20 10.5 20H1V10.5Z"
+              fill="#B6B6B6"
+            />
+            <circle cx="18.5" cy="4" r="3.5" fill="#CD6567" stroke="white" />
+          </svg>
+        </a>
       </div>
       <div class="top-order-instance__date">от 24 декабря 2025, 12:43</div>
     </div>
@@ -50,10 +82,6 @@
       </div>
       <div class="top-order-instance__order_type">Заказ из приложения</div>
     </div>
-  </div>
-
-  <div class="top-order-instance__map">
-    <img src="/img/map.png" alt="" />
   </div>
 </section>
 
@@ -152,6 +180,7 @@
       </div>
       <div class="order-delivery__pay_history"></div>
       <div class="order-delivery__pay_status wait">Ожидает оплаты</div>
+      <div class="order_button green">Принять оплату</div>
     </div>
   </div>
 </section>
@@ -186,9 +215,7 @@
       <div class="buket">
         <div class="order-sostav__item_body">
           <div class="order-sostav__item_info">
-            <p class="order-sostav__item_title">
-              Букет «Власть»
-            </p>
+            <p class="order-sostav__item_title">Букет «Власть»</p>
             <p class="order-sostav__item_dopinfo">Товар подлежит возврату</p>
           </div>
           <div class="order-sostav__item_price">
@@ -227,9 +254,26 @@
 <section class="order-comment" id="comment_section">
   <div class="input-box">
     <p class="title-field">Служебный комментарий</p>
-    <textarea placeholder="Комментарий" value="" class="input-field-comment"></textarea>
+    <textarea
+      placeholder="Комментарий"
+      value=""
+      class="input-field-comment"
+    ></textarea>
   </div>
   <div class="order_button black" style="max-width: 141px">Отправить</div>
+  <div class="order-comment__history">
+    <div class="order-comment__item buble_grey">
+      <div class="order-comment__item_avatar">
+        <img src="/img/Avatar.svg" alt="avatar" />
+      </div>
+      <div class="order-comment__item_body">
+        <p class="order-comment__item_user">Алексей Ворох, 12.02.24, 12:00</p>
+        <p class="order-comment__item_message">
+          важно, чтобы упаковка букета была жёлтая
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="order-history" id="order_history">
@@ -246,13 +290,54 @@
   </div>
 </section>
 
-<section class="order-take-button">
-<div class="order_button" >Взять заказ</div>
+<section class="order-buttons-down">
+  <div class="order-buttons-down__left">
+    <div class="order_button black">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M4 20.7498H20C20.0663 20.7498 20.1299 20.7762 20.1768 20.823C20.2236 20.8698 20.25 20.9335 20.25 20.9998C20.25 21.066 20.2236 21.1296 20.1768 21.1765C20.1299 21.2234 20.0663 21.2498 20 21.2498H4C3.9337 21.2498 3.87013 21.2234 3.82324 21.1765C3.77641 21.1296 3.75 21.066 3.75 20.9998C3.75005 20.9335 3.7764 20.8698 3.82324 20.823C3.87012 20.7762 3.93374 20.7498 4 20.7498ZM16.7832 2.74976C17.1152 2.74968 17.4442 2.81508 17.751 2.94214C17.9813 3.03753 18.1958 3.16636 18.3877 3.32397L18.5713 3.48999L19.5088 4.43042C19.9818 4.90462 20.2479 5.54675 20.248 6.21655C20.248 6.88651 19.982 7.52937 19.5088 8.00366L10.0098 17.5095C9.53629 17.983 8.8927 18.2498 8.22266 18.2498H5C4.86214 18.2498 4.75 18.1376 4.75 17.9998V14.7966L4.7627 14.5476C4.82017 13.9696 5.07541 13.4263 5.48926 13.0115L14.9961 3.49097C15.2306 3.25616 15.5089 3.06931 15.8154 2.94214C16.1221 2.81494 16.4512 2.74986 16.7832 2.74976Z"
+          fill="#A8A8A8"
+          stroke="#A8A8A8"
+        />
+      </svg>
+      Ред.
+    </div>
+    <div class="order_button black" style="gap: 0px">
+      Передать
+      <div class="icon-button-right">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16 12.5L24 20.2717L16 27.5"
+            stroke="#434343"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="order_button black">Написать клиенту</div>
+  </div>
+  <div class="order-buttons-down__right">
+    <div class="order_button" onclick="openModal('pinkod-modal')">В сборку</div>
+  </div>
 </section>
 
 <script>
-        $('.orderDone-history').on('click', () => {
-        $('.orderDone-history-drop').toggleClass('dropActive')
-        $('.orderDone-drop-img').toggleClass('rotate_arrow')
-    })
+  $(".orderDone-history").on("click", () => {
+    $(".orderDone-history-drop").toggleClass("dropActive");
+    $(".orderDone-drop-img").toggleClass("rotate_arrow");
+  });
 </script>

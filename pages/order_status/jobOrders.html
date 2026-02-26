@@ -23,30 +23,14 @@
   </button>
   <div class="order-top__midle">
     <div class="order-top__main">
-      <div class="title">Все заказы</div>
+      <div class="title">Заказы в работе</div>
     </div>
     <div class="order-top__count">7 заказов</div>
   </div>
-
-  <button class="btn-icon btn-icon_red">
-    <svg
-      width="34"
-      height="34"
-      viewBox="0 0 34 34"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M2 11.3611V26.2639C2 27.6526 2.57068 28.9844 3.5865 29.9664C4.60233 30.9483 5.98008 31.5 7.41667 31.5H26.5833C28.0199 31.5 29.3977 30.9483 30.4135 29.9664C31.4293 28.9844 32 27.6526 32 26.2639V11.3611H2ZM24.9167 21.8333C25.4692 21.8333 25.9991 22.0455 26.3898 22.4232C26.7805 22.8009 27 23.3131 27 23.8472C27 24.3813 26.7805 24.8936 26.3898 25.2713C25.9991 25.6489 25.4692 25.8611 24.9167 25.8611C24.3641 25.8611 23.8342 25.6489 23.4435 25.2713C23.0528 24.8936 22.8333 24.3813 22.8333 23.8472C22.8333 23.3131 23.0528 22.8009 23.4435 22.4232C23.8342 22.0455 24.3641 21.8333 24.9167 21.8333ZM17 21.8333C17.5525 21.8333 18.0824 22.0455 18.4731 22.4232C18.8638 22.8009 19.0833 23.3131 19.0833 23.8472C19.0833 24.3813 18.8638 24.8936 18.4731 25.2713C18.0824 25.6489 17.5525 25.8611 17 25.8611C16.4475 25.8611 15.9176 25.6489 15.5269 25.2713C15.1362 24.8936 14.9167 24.3813 14.9167 23.8472C14.9167 23.3131 15.1362 22.8009 15.5269 22.4232C15.9176 22.0455 16.4475 21.8333 17 21.8333ZM24.9167 14.5833C25.4692 14.5833 25.9991 14.7955 26.3898 15.1732C26.7805 15.5509 27 16.0631 27 16.5972C27 17.1313 26.7805 17.6436 26.3898 18.0213C25.9991 18.3989 25.4692 18.6111 24.9167 18.6111C24.3641 18.6111 23.8342 18.3989 23.4435 18.0213C23.0528 17.6436 22.8333 17.1313 22.8333 16.5972C22.8333 16.0631 23.0528 15.5509 23.4435 15.1732C23.8342 14.7955 24.3641 14.5833 24.9167 14.5833ZM17 14.5833C17.5525 14.5833 18.0824 14.7955 18.4731 15.1732C18.8638 15.5509 19.0833 16.0631 19.0833 16.5972C19.0833 17.1313 18.8638 17.6436 18.4731 18.0213C18.0824 18.3989 17.5525 18.6111 17 18.6111C16.4475 18.6111 15.9176 18.3989 15.5269 18.0213C15.1362 17.6436 14.9167 17.1313 14.9167 16.5972C14.9167 16.0631 15.1362 15.5509 15.5269 15.1732C15.9176 14.7955 16.4475 14.5833 17 14.5833ZM9.08333 14.5833C9.63587 14.5833 10.1658 14.7955 10.5565 15.1732C10.9472 15.5509 11.1667 16.0631 11.1667 16.5972C11.1667 17.1313 10.9472 17.6436 10.5565 18.0213C10.1658 18.3989 9.63587 18.6111 9.08333 18.6111C8.5308 18.6111 8.0009 18.3989 7.61019 18.0213C7.21949 17.6436 7 17.1313 7 16.5972C7 16.0631 7.21949 15.5509 7.61019 15.1732C8.0009 14.7955 8.5308 14.5833 9.08333 14.5833ZM7.41667 2.5C5.98008 2.5 4.60233 3.05166 3.5865 4.03362C2.57068 5.01558 2 6.34741 2 7.73611V8.94444H32V7.73611C32 6.34741 31.4293 5.01558 30.4135 4.03362C29.3977 3.05166 28.0199 2.5 26.5833 2.5H7.41667Z"
-        fill="#CD6567"
-      />
-    </svg>
-    Заказы
-  </button>
 </div>
 <div class="order-list">
   <div class="order-card">
-    <div class="order-card__item" data-instance="orderReadyInstance">
+    <div class="order-card__item" data-instance="orderJobInstance">
       <div class="order-card__pn">7</div>
       <div class="order-card__item_contain">
         <div class="order-card__top">
@@ -87,7 +71,7 @@
                 </div>
               </div>
             </div>
-            <div class="order-status ready">Готов к выдаче</div>
+            <div class="order-status job">В работе</div>
           </div>
         </div>
         <div class="order-card__bottom">
@@ -116,7 +100,7 @@
       </div>
     </div>
 
-    <div class="order-card__item" data-instance="orderAppointInstance">
+    <div class="order-card__item" data-instance="orderJobInstance">
       <div class="order-card__pn">6</div>
       <div class="order-card__item_contain">
         <div class="order-card__top">
@@ -157,7 +141,7 @@
                 </div>
               </div>
             </div>
-            <div class="order-status appoint">Назначен курьер</div>
+            <div class="order-status job">В работе</div>
           </div>
         </div>
         <div class="order-card__bottom">
@@ -186,7 +170,7 @@
       </div>
     </div>
 
-    <div class="order-card__item" data-instance="orderNewInstance">
+    <div class="order-card__item" data-instance="orderJobInstance">
       <div class="order-card__pn">5</div>
       <div class="order-card__item_contain">
         <div class="order-card__top">
@@ -227,7 +211,7 @@
                 </div>
               </div>
             </div>
-            <div class="order-status new">Новый</div>
+            <div class="order-status job">В работе</div>
           </div>
         </div>
         <div class="order-card__bottom">
@@ -238,7 +222,7 @@
             <div class="order-card__info">
               <div class="order-card__info_item">
                 <span>Александр</span>
-                <p class="gradient_phone white">+7 (336) 523-56-56</p>
+                <p>+7 (336) 523-56-56</p>
               </div>
               <div class="order-card__info_item">
                 <span class="text-weight">Доставка</span>
@@ -256,7 +240,7 @@
       </div>
     </div>
 
-    <div class="order-card__item" data-instance="orderReadyInstance">
+    <div class="order-card__item" data-instance="orderJobInstance">
       <div class="order-card__pn">4</div>
       <div class="order-card__item_contain">
         <div class="order-card__top">
@@ -297,7 +281,7 @@
                 </div>
               </div>
             </div>
-            <div class="order-status ready">Готов к выдаче</div>
+            <div class="order-status job">В работе</div>
           </div>
         </div>
         <div class="order-card__bottom">
@@ -387,104 +371,6 @@
         />
       </div>
 
-      <div class="dropdown">
-        <div class="dropdown__item">
-          <input
-            type="text"
-            name=""
-            id=""
-            class="input_field input_field_dropdown"
-            placeholder="Район"
-          />
-          <svg
-            class="dropdown__arrow dropdown__arrow_absolute"
-            xmlns="http://www.w3.org/2000/svg"
-            width="21"
-            height="11"
-            viewBox="0 0 21 11"
-            fill="none"
-          >
-            <path
-              d="M1 1L10.3653 10L19.0756 1"
-              stroke="#848484"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-        </div>
-        <div class="dropdown__contain dropdown__contain_base">
-          <p class="dropdown__contain_item">1</p>
-          <p class="dropdown__contain_item">2</p>
-          <p class="dropdown__contain_item">3</p>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <div class="dropdown__item">
-          <input
-            type="text"
-            name=""
-            id=""
-            class="input_field input_field_dropdown"
-            placeholder="Магазин"
-          />
-          <svg
-            class="dropdown__arrow dropdown__arrow_absolute"
-            xmlns="http://www.w3.org/2000/svg"
-            width="21"
-            height="11"
-            viewBox="0 0 21 11"
-            fill="none"
-          >
-            <path
-              d="M1 1L10.3653 10L19.0756 1"
-              stroke="#848484"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-        </div>
-        <div class="dropdown__contain dropdown__contain_base">
-          <p class="dropdown__contain_item">1</p>
-          <p class="dropdown__contain_item">2</p>
-          <p class="dropdown__contain_item">3</p>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <div class="dropdown__item">
-          <input
-            type="text"
-            name=""
-            id=""
-            class="input_field input_field_dropdown"
-            placeholder="Ячейка"
-          />
-          <svg
-            class="dropdown__arrow dropdown__arrow_absolute"
-            xmlns="http://www.w3.org/2000/svg"
-            width="21"
-            height="11"
-            viewBox="0 0 21 11"
-            fill="none"
-          >
-            <path
-              d="M1 1L10.3653 10L19.0756 1"
-              stroke="#848484"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-        </div>
-        <div class="dropdown__contain dropdown__contain_base">
-          <p class="dropdown__contain_item">1</p>
-          <p class="dropdown__contain_item">2</p>
-          <p class="dropdown__contain_item">3</p>
-        </div>
-      </div>
     </div>
 
     <div class="filter-modal__button">

@@ -1,5 +1,5 @@
 <div class="order-top">
-  <button class="btn-icon">
+  <button class="btn-icon" onclick="openModal('filter-modal')">
     <svg
       width="28"
       height="24"
@@ -310,6 +310,73 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-container filter-modal">
+  <div class="filter-modal__wrapper">
+    <div class="filter-modal-title">Фильтры</div>
+    <div class="filter-modal__contain">
+      <div class="field_with_image">
+        <div class="field_image">
+          <img src="/img/lupa.svg" alt="search" />
+        </div>
+        <input
+          type="text"
+          class="input_field search-field"
+          required=""
+          placeholder="Найти заказ"
+        />
+      </div>
+
+      <div class="dropdown">
+        <div class="dropdown__item">
+          <input
+            type="text"
+            name=""
+            id=""
+            class="input_field input_field_dropdown"
+            placeholder="Срочность"
+          />
+          <svg
+            class="dropdown__arrow dropdown__arrow_absolute"
+            xmlns="http://www.w3.org/2000/svg"
+            width="21"
+            height="11"
+            viewBox="0 0 21 11"
+            fill="none"
+          >
+            <path
+              d="M1 1L10.3653 10L19.0756 1"
+              stroke="#848484"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </div>
+        <div class="dropdown__contain dropdown__contain_base">
+          <p class="dropdown__contain_item">1</p>
+          <p class="dropdown__contain_item">2</p>
+          <p class="dropdown__contain_item">3</p>
+        </div>
+      </div>
+
+      <div class="input-box">
+        <p class="title-field">Время заказа</p>
+        <input
+          type="text"
+          class="input_field"
+          required=""
+          placeholder="Найти заказ"
+        />
+      </div>
+
+
+    <div class="filter-modal__button">
+      <div class="order_button" style="flex: 0 0 163px" onclick="closeModal('filter-modal')">Применить</div>
+      <div class="clear_button">Сбросить</div>
     </div>
   </div>
 </div>
